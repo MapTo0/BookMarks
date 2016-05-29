@@ -15,7 +15,11 @@
 		879F6A2A1CFA139900534083 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879F6A281CFA139900534083 /* LaunchScreen.storyboard */; };
 		879F6A351CFA139900534083 /* BookMarksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879F6A341CFA139900534083 /* BookMarksTests.swift */; };
 		879F6A401CFA139900534083 /* BookMarksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879F6A3F1CFA139900534083 /* BookMarksUITests.swift */; };
-		E62F0A43583217F2ECF6B47D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B721016506537507654626F3 /* libPods.a */; };
+		87B741D01CFB0F6F00521B4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87B741CF1CFB0F6F00521B4C /* GoogleService-Info.plist */; };
+		87B741D21CFB100500521B4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87B741D11CFB100500521B4C /* GoogleService-Info.plist */; };
+		87D884F41CFB06380057B91C /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D884F31CFB06380057B91C /* libicucore.tbd */; };
+		87D884F61CFB065C0057B91C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D884F51CFB065C0057B91C /* libc++.tbd */; };
+		CC2DEA71990A84B191AB2FA8 /* libPods-BookMarks.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4A83ADE953CC2DA3AD28F5 /* libPods-BookMarks.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2BADD59E8238222437FA7DD9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		5DD7F9D6638CBAA53E6967FA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		139370A84581275853B2034E /* Pods-BookMarks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookMarks.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookMarks/Pods-BookMarks.release.xcconfig"; sourceTree = "<group>"; };
+		1F4A83ADE953CC2DA3AD28F5 /* libPods-BookMarks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BookMarks.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CF901C3248393D3A7122FB0 /* Pods-BookMarks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookMarks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookMarks/Pods-BookMarks.debug.xcconfig"; sourceTree = "<group>"; };
 		879F6A1A1CFA139900534083 /* BookMarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookMarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879F6A1D1CFA139900534083 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		879F6A1F1CFA139900534083 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +57,10 @@
 		879F6A3B1CFA139900534083 /* BookMarksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookMarksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		879F6A3F1CFA139900534083 /* BookMarksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarksUITests.swift; sourceTree = "<group>"; };
 		879F6A411CFA139900534083 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B721016506537507654626F3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		87B741CF1CFB0F6F00521B4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		87B741D11CFB100500521B4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		87D884F31CFB06380057B91C /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		87D884F51CFB065C0057B91C /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +68,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E62F0A43583217F2ECF6B47D /* libPods.a in Frameworks */,
+				87D884F61CFB065C0057B91C /* libc++.tbd in Frameworks */,
+				87D884F41CFB06380057B91C /* libicucore.tbd in Frameworks */,
+				CC2DEA71990A84B191AB2FA8 /* libPods-BookMarks.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,15 +91,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7F5A9A81D467E77ABC103C5E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2BADD59E8238222437FA7DD9 /* Pods.debug.xcconfig */,
-				5DD7F9D6638CBAA53E6967FA /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		879F6A111CFA139900534083 = {
 			isa = PBXGroup;
 			children = (
@@ -97,8 +98,8 @@
 				879F6A331CFA139900534083 /* BookMarksTests */,
 				879F6A3E1CFA139900534083 /* BookMarksUITests */,
 				879F6A1B1CFA139900534083 /* Products */,
-				7F5A9A81D467E77ABC103C5E /* Pods */,
-				9F23073A7045CD10FE226917 /* Frameworks */,
+				D8DFE40A11F3E918EAF6C858 /* Pods */,
+				DD5F9BD673408D03F0E632BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,8 +118,10 @@
 			children = (
 				879F6A1D1CFA139900534083 /* AppDelegate.swift */,
 				879F6A1F1CFA139900534083 /* FirstViewController.swift */,
+				87B741CF1CFB0F6F00521B4C /* GoogleService-Info.plist */,
 				879F6A211CFA139900534083 /* SecondViewController.swift */,
 				879F6A231CFA139900534083 /* Main.storyboard */,
+				87B741D11CFB100500521B4C /* GoogleService-Info.plist */,
 				879F6A261CFA139900534083 /* Assets.xcassets */,
 				879F6A281CFA139900534083 /* LaunchScreen.storyboard */,
 				879F6A2B1CFA139900534083 /* Info.plist */,
@@ -144,10 +147,21 @@
 			path = BookMarksUITests;
 			sourceTree = "<group>";
 		};
-		9F23073A7045CD10FE226917 /* Frameworks */ = {
+		D8DFE40A11F3E918EAF6C858 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B721016506537507654626F3 /* libPods.a */,
+				5CF901C3248393D3A7122FB0 /* Pods-BookMarks.debug.xcconfig */,
+				139370A84581275853B2034E /* Pods-BookMarks.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DD5F9BD673408D03F0E632BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87D884F51CFB065C0057B91C /* libc++.tbd */,
+				87D884F31CFB06380057B91C /* libicucore.tbd */,
+				1F4A83ADE953CC2DA3AD28F5 /* libPods-BookMarks.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -260,6 +274,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				879F6A2A1CFA139900534083 /* LaunchScreen.storyboard in Resources */,
+				87B741D01CFB0F6F00521B4C /* GoogleService-Info.plist in Resources */,
+				87B741D21CFB100500521B4C /* GoogleService-Info.plist in Resources */,
 				879F6A271CFA139900534083 /* Assets.xcassets in Resources */,
 				879F6A251CFA139900534083 /* Main.storyboard in Resources */,
 			);
@@ -294,7 +310,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BookMarks/Pods-BookMarks-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5D55B8D7717D1621E7E99C24 /* Embed Pods Frameworks */ = {
@@ -309,7 +325,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BookMarks/Pods-BookMarks-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6DDF24F21831E97E09B7E791 /* Check Pods Manifest.lock */ = {
@@ -478,7 +494,7 @@
 		};
 		879F6A451CFA139900534083 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2BADD59E8238222437FA7DD9 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 5CF901C3248393D3A7122FB0 /* Pods-BookMarks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BookMarks/Info.plist;
@@ -490,7 +506,7 @@
 		};
 		879F6A461CFA139900534083 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5DD7F9D6638CBAA53E6967FA /* Pods.release.xcconfig */;
+			baseConfigurationReference = 139370A84581275853B2034E /* Pods-BookMarks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BookMarks/Info.plist;

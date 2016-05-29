@@ -1,3 +1,4 @@
+
 //
 //  AppDelegate.swift
 //  BookMarks
@@ -7,6 +8,7 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        FIRApp.configure()
+        
+        var rootRef = FIRDatabase.database().reference()
+        
+        let myObj = FIRAuth(app: FIRApp.defaultApp()!)
+        
+        
+        
+        myObj!.createUserWithEmail("test@test.bg", password: "wtdsfasfdsaf", completion: nil)
+        
+        rootRef.setValue("sadpofkasdpofkaspo")
         return true
     }
 

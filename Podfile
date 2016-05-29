@@ -4,6 +4,10 @@
 # use_frameworks!
 
 target 'BookMarks' do
+    pod 'Firebase', '>= 2.5.1'
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
+    pod 'Firebase/Auth'
 
 end
 
@@ -15,4 +19,3 @@ target 'BookMarksUITests' do
 
 end
 
-pod 'Firebase'
