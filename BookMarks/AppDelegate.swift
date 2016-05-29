@@ -20,15 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FIRApp.configure()
         
-        var rootRef = FIRDatabase.database().reference()
-        
-        let myObj = FIRAuth(app: FIRApp.defaultApp()!)
-        
-        
-        
-        myObj!.createUserWithEmail("test@test.bg", password: "wtdsfasfdsaf", completion: nil)
-        
-        rootRef.setValue("sadpofkasdpofkaspo")
+//        var rootRef = FIRDatabase.database().reference()
+//        
+//        let myObj = FIRAuth(app: FIRApp.defaultApp()!)
+//        
+//        
+//        
+//        myObj!.createUserWithEmail("test@test.bg", password: "wtdsfasfdsaf", completion: nil)
+//        
+//        rootRef.setValue("sadpofkasdpofkaspo")
         return true
     }
 

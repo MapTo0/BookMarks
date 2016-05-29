@@ -67,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="1952" y="-708"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="UBc-xh-fVf">
             <objects>
-                <viewController id="QkE-Cs-oWR" sceneMemberID="viewController">
+                <viewController id="QkE-Cs-oWR" customClass="RegisterViewController" customModule="BookMarks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pkf-GW-oXf"/>
                         <viewControllerLayoutGuide type="bottom" id="fev-kk-ctB"/>
@@ -104,6 +104,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="N0d-SD-znJ" id="cU6-Pg-NyE"/>
+                        <outlet property="passField" destination="ZqL-AB-psy" id="VHA-qe-R3V"/>
+                        <outlet property="registerBtn" destination="qpm-sC-W05" id="bwm-K6-bz1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o1O-Kz-hYt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -213,7 +218,6 @@
         <!--Sign in-->
         <scene sceneID="TrI-yU-zmx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ovT-A3-SjA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cU3-T5-bVN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Sign in" image="login" id="acW-dT-cKf"/>
                     <toolbarItems/>
@@ -226,6 +230,7 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="JQ9-5O-HqY"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ovT-A3-SjA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
