@@ -114,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="2630" y="-1107"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="wUs-nM-xoI">
             <objects>
-                <viewController id="c07-7w-aSM" sceneMemberID="viewController">
+                <viewController id="c07-7w-aSM" customClass="LoginViewController" customModule="BookMarks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OIE-kO-xAY"/>
                         <viewControllerLayoutGuide type="bottom" id="PF8-3r-VV2"/>
@@ -151,6 +151,11 @@
                             <constraint firstItem="5hm-fd-2yD" firstAttribute="centerX" secondItem="Aie-EF-33g" secondAttribute="centerX" id="wgz-Vi-buM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="PQZ-MZ-JWE" id="3T4-1W-Aac"/>
+                        <outlet property="loginBtn" destination="5hm-fd-2yD" id="D1m-AR-w04"/>
+                        <outlet property="passField" destination="GmU-wo-QKL" id="PhD-xM-B38"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ejv-c3-ZcU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
