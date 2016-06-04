@@ -14,22 +14,36 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    var firebaseBooks = FIRDatabaseReference()
+    var books = NSMutableArray()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         FIRApp.configure()
+        firebaseBooks = FIRDatabase.database().reference().child("books")
+        print("--")
+        print(firebaseBooks)
+        print("--")
         
-//        var rootRef = FIRDatabase.database().reference()
-//        
-//        let myObj = FIRAuth(app: FIRApp.defaultApp()!)
-//        
-//        
-//        
-//        myObj!.createUserWithEmail("test@test.bg", password: "wtdsfasfdsaf", completion: nil)
-//        
-//        rootRef.setValue("sadpofkasdpofkaspo")
+        
+        firebaseBooks.observeEventType(.Value, withBlock: { snapshot in
+            let tempFirebaseBooks = snapshot.value as! NSArray
+            self.castBooks(tempFirebaseBooks);
+            }, withCancelBlock: { error in
+                print(error.description)
+        })
+        
+        
         return true
+    }
+    
+    func castBooks(firebaseBooks: NSArray) {
+        firebaseBooks.forEach { (book) in
+            let bookName = book.objectForKey("name")
+            books.addObject(bookName!)
+            print(books)
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {
