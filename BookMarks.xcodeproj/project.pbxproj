@@ -17,6 +17,7 @@
 		879F6A351CFA139900534083 /* BookMarksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879F6A341CFA139900534083 /* BookMarksTests.swift */; };
 		879F6A401CFA139900534083 /* BookMarksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879F6A3F1CFA139900534083 /* BookMarksUITests.swift */; };
 		87A7B5811D02E95A004484E9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A7B5801D02E95A004484E9 /* LoginViewController.swift */; };
+		87B53B721D045BE5005EC29F /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B53B711D045BE5005EC29F /* Book.swift */; };
 		87B692161D02F99C0033C290 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B692151D02F99C0033C290 /* SearchViewController.swift */; };
 		87B741D01CFB0F6F00521B4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87B741CF1CFB0F6F00521B4C /* GoogleService-Info.plist */; };
 		87B741D21CFB100500521B4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87B741D11CFB100500521B4C /* GoogleService-Info.plist */; };
@@ -62,6 +63,7 @@
 		879F6A3F1CFA139900534083 /* BookMarksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarksUITests.swift; sourceTree = "<group>"; };
 		879F6A411CFA139900534083 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87A7B5801D02E95A004484E9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		87B53B711D045BE5005EC29F /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		87B692151D02F99C0033C290 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		87B741CF1CFB0F6F00521B4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		87B741D11CFB100500521B4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				87A7B5801D02E95A004484E9 /* LoginViewController.swift */,
 				879F6A211CFA139900534083 /* SecondViewController.swift */,
 				87B692151D02F99C0033C290 /* SearchViewController.swift */,
+				87B53B711D045BE5005EC29F /* Book.swift */,
 				879F6A231CFA139900534083 /* Main.storyboard */,
 				87B741D11CFB100500521B4C /* GoogleService-Info.plist */,
 				879F6A261CFA139900534083 /* Assets.xcassets */,
@@ -246,6 +249,7 @@
 				TargetAttributes = {
 					879F6A191CFA139900534083 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = MNFJT9ZJP3;
 					};
 					879F6A2F1CFA139900534083 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -361,6 +365,7 @@
 			files = (
 				87B692161D02F99C0033C290 /* SearchViewController.swift in Sources */,
 				879F6A221CFA139900534083 /* SecondViewController.swift in Sources */,
+				87B53B721D045BE5005EC29F /* Book.swift in Sources */,
 				879F6A1E1CFA139900534083 /* AppDelegate.swift in Sources */,
 				879F6A201CFA139900534083 /* FirstViewController.swift in Sources */,
 				87A7B5811D02E95A004484E9 /* LoginViewController.swift in Sources */,
@@ -509,11 +514,14 @@
 			baseConfigurationReference = 5CF901C3248393D3A7122FB0 /* Pods-BookMarks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = BookMarks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "BookMarks-inc.BookMarks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -522,11 +530,14 @@
 			baseConfigurationReference = 139370A84581275853B2034E /* Pods-BookMarks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = BookMarks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "BookMarks-inc.BookMarks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -13,40 +13,52 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     let searchField = UISearchBar()
     let tableView = UITableView()
+    var filteredBooks = Array<AnyObject>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         searchField.frame = CGRect(x: 0, y: 20, width: self.view.bounds.size.width, height: 44)
         self.view.addSubview(searchField)
-        
         tableView.frame = CGRect(x: 0, y: 64, width: self.view.bounds.size.width, height: self.view.bounds.size.height - 64)
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "wtf")
-        tableView.backgroundColor = UIColor.blueColor()
         self.view.addSubview(tableView)
-        
         tableView.dataSource = self
+        searchField.delegate = self
+        filteredBooks = appDelegate.books as Array<AnyObject>
     
     }
     
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return appDelegate.books.count
+        return filteredBooks.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("wtf")
-        let imageUrl = NSURL(string: "https://httpsimage.com/img/kuche.jpg")
-        let data = NSData(contentsOfURL: imageUrl!)
-
-        if cell != nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "wtf")
+        var cell = tableView.dequeueReusableCellWithIdentifier("Cell")
+        if cell == nil {
+            cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
         }
         
-        cell?.textLabel?.text = appDelegate.books[indexPath.row] as? String
-        cell?.detailTextLabel?.text = "by " + (appDelegate.authors[indexPath.row] as! String)
-        cell?.imageView?.image = UIImage(data: data!)
+        let currentBook = filteredBooks[indexPath.row] as! Book
+        cell?.textLabel?.text = currentBook.name
+        cell?.detailTextLabel?.text = "by " + currentBook.author
+        cell?.imageView?.image = UIImage(data: currentBook.imgData)
         
         return cell!
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        if (searchBar.text == "") {
+            filteredBooks = appDelegate.books as Array<AnyObject>
+        } else {
+            let bookNamePredicate = NSPredicate(format: "name contains[c] %@", searchBar.text!)
+            filteredBooks = appDelegate.books.filteredArrayUsingPredicate(bookNamePredicate) as Array<AnyObject>
+        }
+        tableView.reloadData()
+    }
+    
+    func searchBarShouldBeginEditing(searchBar: UISearchBar) -> Bool {
+        searchBar.enablesReturnKeyAutomatically = false
+        return true
     }
 
 }

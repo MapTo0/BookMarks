@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var firebaseBooks = FIRDatabaseReference()
     var books = NSMutableArray()
-    var authors = NSMutableArray()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -39,9 +38,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         firebaseBooks.forEach { (book) in
             let bookName = book.objectForKey("name")
             let author = book.objectForKey("author")
-            authors.addObject(author!)
-            books.addObject(bookName!)
-            print(books)
+            let databaseImageUrl = book.objectForKey("img") as! String
+            let imageUrl = NSURL(string: databaseImageUrl)
+            let data = NSData(contentsOfURL: imageUrl!)
+            let bookObj = Book();
+            bookObj.author = author as! String
+            bookObj.name = bookName as! String
+            bookObj.imgData = data! as NSData
+
+            books.addObject(bookObj)
+            print(bookObj.name)
         }
     }
 
