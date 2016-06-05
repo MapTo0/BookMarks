@@ -13,8 +13,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     let searchField = UISearchBar()
     let tableView = UITableView()
-    let candies = ["wtf", "wtf2", "wtf3"]
-    let books = NSMutableArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,21 +30,21 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(books.count)
-        return 4
+        return appDelegate.books.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("wtf")
+        var cell = tableView.dequeueReusableCellWithIdentifier("wtf")
+        let imageUrl = NSURL(string: "https://httpsimage.com/img/kuche.jpg")
+        let data = NSData(contentsOfURL: imageUrl!)
+
+        if cell != nil {
+            cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "wtf")
+        }
         
-//        var url = NSURL.URLWithString("http://lightswitchtimer.co.uk/wp-content/uploads/2013/12/lights-for-pets.jpg")
-//        var data = NSData(contentsOfURL : url)
-//        var image = UIImage(data : data)
-//        cell?.imageView?.image = UIImage (data: data!)
-//        c.image = UIImage(data: data!)
-        
-//        cell?.detailTextLabel = "subtitle"
-        cell?.textLabel?.text = appDelegate.books[indexPath.row] as! String
+        cell?.textLabel?.text = appDelegate.books[indexPath.row] as? String
+        cell?.detailTextLabel?.text = "by " + (appDelegate.authors[indexPath.row] as! String)
+        cell?.imageView?.image = UIImage(data: data!)
         
         return cell!
     }

@@ -17,15 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var firebaseBooks = FIRDatabaseReference()
     var books = NSMutableArray()
+    var authors = NSMutableArray()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         FIRApp.configure()
         firebaseBooks = FIRDatabase.database().reference().child("books")
-        print("--")
-        print(firebaseBooks)
-        print("--")
-        
         
         firebaseBooks.observeEventType(.Value, withBlock: { snapshot in
             let tempFirebaseBooks = snapshot.value as! NSArray
@@ -41,6 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func castBooks(firebaseBooks: NSArray) {
         firebaseBooks.forEach { (book) in
             let bookName = book.objectForKey("name")
+            let author = book.objectForKey("author")
+            authors.addObject(author!)
             books.addObject(bookName!)
             print(books)
         }
