@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		874E3DB91CFB8790001BBBA4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874E3DB81CFB8790001BBBA4 /* RegisterViewController.swift */; };
 		876861A51D05E8E800339CB2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 876861A41D05E8E800339CB2 /* GoogleService-Info.plist */; };
+		876861A91D06075700339CB2 /* SearchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876861A81D06075700339CB2 /* SearchDetailsViewController.swift */; };
+		876861AB1D06084100339CB2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876861AA1D06084100339CB2 /* SearchViewController.swift */; };
 		879F6A1E1CFA139900534083 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879F6A1D1CFA139900534083 /* AppDelegate.swift */; };
 		879F6A201CFA139900534083 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879F6A1F1CFA139900534083 /* FirstViewController.swift */; };
 		879F6A221CFA139900534083 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879F6A211CFA139900534083 /* SecondViewController.swift */; };
@@ -21,7 +23,7 @@
 		87B53B721D045BE5005EC29F /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B53B711D045BE5005EC29F /* Book.swift */; };
 		87B53B741D046580005EC29F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B53B731D046580005EC29F /* HomeViewController.swift */; };
 		87B53B761D047003005EC29F /* homeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B53B751D047003005EC29F /* homeView.swift */; };
-		87B692161D02F99C0033C290 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B692151D02F99C0033C290 /* SearchViewController.swift */; };
+		87B692161D02F99C0033C290 /* SearchNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B692151D02F99C0033C290 /* SearchNavigationViewController.swift */; };
 		87D884F41CFB06380057B91C /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D884F31CFB06380057B91C /* libicucore.tbd */; };
 		87D884F61CFB065C0057B91C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D884F51CFB065C0057B91C /* libc++.tbd */; };
 		CC2DEA71990A84B191AB2FA8 /* libPods-BookMarks.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4A83ADE953CC2DA3AD28F5 /* libPods-BookMarks.a */; };
@@ -50,6 +52,8 @@
 		5CF901C3248393D3A7122FB0 /* Pods-BookMarks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookMarks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookMarks/Pods-BookMarks.debug.xcconfig"; sourceTree = "<group>"; };
 		874E3DB81CFB8790001BBBA4 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		876861A41D05E8E800339CB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		876861A81D06075700339CB2 /* SearchDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDetailsViewController.swift; sourceTree = "<group>"; };
+		876861AA1D06084100339CB2 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		879F6A1A1CFA139900534083 /* BookMarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookMarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879F6A1D1CFA139900534083 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		879F6A1F1CFA139900534083 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +72,7 @@
 		87B53B711D045BE5005EC29F /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		87B53B731D046580005EC29F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		87B53B751D047003005EC29F /* homeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeView.swift; sourceTree = "<group>"; };
-		87B692151D02F99C0033C290 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		87B692151D02F99C0033C290 /* SearchNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchNavigationViewController.swift; sourceTree = "<group>"; };
 		87D884F31CFB06380057B91C /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		87D884F51CFB065C0057B91C /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -128,10 +132,12 @@
 			children = (
 				879F6A1D1CFA139900534083 /* AppDelegate.swift */,
 				879F6A1F1CFA139900534083 /* FirstViewController.swift */,
+				879F6A211CFA139900534083 /* SecondViewController.swift */,
 				874E3DB81CFB8790001BBBA4 /* RegisterViewController.swift */,
 				87A7B5801D02E95A004484E9 /* LoginViewController.swift */,
-				879F6A211CFA139900534083 /* SecondViewController.swift */,
-				87B692151D02F99C0033C290 /* SearchViewController.swift */,
+				87B692151D02F99C0033C290 /* SearchNavigationViewController.swift */,
+				876861AA1D06084100339CB2 /* SearchViewController.swift */,
+				876861A81D06075700339CB2 /* SearchDetailsViewController.swift */,
 				87B53B711D045BE5005EC29F /* Book.swift */,
 				87B53B751D047003005EC29F /* homeView.swift */,
 				87B53B731D046580005EC29F /* HomeViewController.swift */,
@@ -365,7 +371,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87B692161D02F99C0033C290 /* SearchViewController.swift in Sources */,
+				87B692161D02F99C0033C290 /* SearchNavigationViewController.swift in Sources */,
+				876861AB1D06084100339CB2 /* SearchViewController.swift in Sources */,
 				879F6A221CFA139900534083 /* SecondViewController.swift in Sources */,
 				87B53B721D045BE5005EC29F /* Book.swift in Sources */,
 				87B53B741D046580005EC29F /* HomeViewController.swift in Sources */,
@@ -374,6 +381,7 @@
 				87A7B5811D02E95A004484E9 /* LoginViewController.swift in Sources */,
 				874E3DB91CFB8790001BBBA4 /* RegisterViewController.swift in Sources */,
 				87B53B761D047003005EC29F /* homeView.swift in Sources */,
+				876861A91D06075700339CB2 /* SearchDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
