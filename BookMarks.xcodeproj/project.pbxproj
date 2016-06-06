@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		874E3DB91CFB8790001BBBA4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874E3DB81CFB8790001BBBA4 /* RegisterViewController.swift */; };
+		876861A51D05E8E800339CB2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 876861A41D05E8E800339CB2 /* GoogleService-Info.plist */; };
 		879F6A1E1CFA139900534083 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879F6A1D1CFA139900534083 /* AppDelegate.swift */; };
 		879F6A201CFA139900534083 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879F6A1F1CFA139900534083 /* FirstViewController.swift */; };
 		879F6A221CFA139900534083 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879F6A211CFA139900534083 /* SecondViewController.swift */; };
@@ -21,8 +22,6 @@
 		87B53B741D046580005EC29F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B53B731D046580005EC29F /* HomeViewController.swift */; };
 		87B53B761D047003005EC29F /* homeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B53B751D047003005EC29F /* homeView.swift */; };
 		87B692161D02F99C0033C290 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B692151D02F99C0033C290 /* SearchViewController.swift */; };
-		87B741D01CFB0F6F00521B4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87B741CF1CFB0F6F00521B4C /* GoogleService-Info.plist */; };
-		87B741D21CFB100500521B4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87B741D11CFB100500521B4C /* GoogleService-Info.plist */; };
 		87D884F41CFB06380057B91C /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D884F31CFB06380057B91C /* libicucore.tbd */; };
 		87D884F61CFB065C0057B91C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D884F51CFB065C0057B91C /* libc++.tbd */; };
 		CC2DEA71990A84B191AB2FA8 /* libPods-BookMarks.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4A83ADE953CC2DA3AD28F5 /* libPods-BookMarks.a */; };
@@ -50,6 +49,7 @@
 		1F4A83ADE953CC2DA3AD28F5 /* libPods-BookMarks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BookMarks.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CF901C3248393D3A7122FB0 /* Pods-BookMarks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookMarks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookMarks/Pods-BookMarks.debug.xcconfig"; sourceTree = "<group>"; };
 		874E3DB81CFB8790001BBBA4 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		876861A41D05E8E800339CB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		879F6A1A1CFA139900534083 /* BookMarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookMarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879F6A1D1CFA139900534083 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		879F6A1F1CFA139900534083 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -69,8 +69,6 @@
 		87B53B731D046580005EC29F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		87B53B751D047003005EC29F /* homeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeView.swift; sourceTree = "<group>"; };
 		87B692151D02F99C0033C290 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		87B741CF1CFB0F6F00521B4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
-		87B741D11CFB100500521B4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		87D884F31CFB06380057B91C /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		87D884F51CFB065C0057B91C /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -138,10 +136,9 @@
 				87B53B751D047003005EC29F /* homeView.swift */,
 				87B53B731D046580005EC29F /* HomeViewController.swift */,
 				879F6A231CFA139900534083 /* Main.storyboard */,
-				87B741D11CFB100500521B4C /* GoogleService-Info.plist */,
+				876861A41D05E8E800339CB2 /* GoogleService-Info.plist */,
 				879F6A261CFA139900534083 /* Assets.xcassets */,
 				879F6A281CFA139900534083 /* LaunchScreen.storyboard */,
-				87B741CF1CFB0F6F00521B4C /* GoogleService-Info.plist */,
 				879F6A2B1CFA139900534083 /* Info.plist */,
 			);
 			path = BookMarks;
@@ -293,8 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				879F6A2A1CFA139900534083 /* LaunchScreen.storyboard in Resources */,
-				87B741D01CFB0F6F00521B4C /* GoogleService-Info.plist in Resources */,
-				87B741D21CFB100500521B4C /* GoogleService-Info.plist in Resources */,
+				876861A51D05E8E800339CB2 /* GoogleService-Info.plist in Resources */,
 				879F6A271CFA139900534083 /* Assets.xcassets in Resources */,
 				879F6A251CFA139900534083 /* Main.storyboard in Resources */,
 			);

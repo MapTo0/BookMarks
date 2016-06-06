@@ -9,24 +9,39 @@
 import UIKit
 import Firebase
 
-class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class SearchViewController: UINavigationController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     let searchField = UISearchBar()
     let tableView = UITableView()
     var filteredBooks = Array<AnyObject>()
+    var firstViewController = UIViewController()
+    var secondViewController = UIViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.addChildViewController(firstViewController)
         searchField.frame = CGRect(x: 0, y: 20, width: self.view.bounds.size.width, height: 44)
-        self.view.addSubview(searchField)
-        tableView.frame = CGRect(x: 0, y: 64, width: self.view.bounds.size.width, height: self.view.bounds.size.height - 64)
-        self.view.addSubview(tableView)
+        firstViewController.view.addSubview(searchField)
+        tableView.frame = CGRect(x: 0, y: 64, width: self.view.bounds.size.width, height: self.view.bounds.size.height - 108)
+        firstViewController.view.addSubview(tableView)
         tableView.dataSource = self
         searchField.delegate = self
+        tableView.delegate = self
         filteredBooks = appDelegate.books as Array<AnyObject>
-    
+        
+        secondViewController.view.backgroundColor = UIColor.whiteColor()
+        firstViewController.view.backgroundColor = UIColor.whiteColor()
+        self.setNavigationBarHidden(true, animated: false)
+        
+        
+        
     }
     
+    //Dismisses keyboard when user presses return or done
+    func textFieldShouldReturn(textField: UITextField!) ->Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredBooks.count
@@ -46,6 +61,13 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell!
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var clickedBook = filteredBooks[indexPath.row]
+        self.pushViewController(secondViewController, animated: true)
+        self.navigationItem.setHidesBackButton(false, animated: false)
+        self.setNavigationBarHidden(false, animated: false)
+    }
+
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         if (searchBar.text == "") {
             filteredBooks = appDelegate.books as Array<AnyObject>
@@ -60,5 +82,4 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         searchBar.enablesReturnKeyAutomatically = false
         return true
     }
-
 }

@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfk-No-Bur">
-                                <rect key="frame" x="213" y="265" width="126" height="30"/>
+                                <rect key="frame" x="213" y="255" width="126" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.79360148154356913" blue="0.44755460327810537" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
                                 <state key="normal" title="Sign in">
