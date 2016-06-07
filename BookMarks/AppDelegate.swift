@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var firebaseBooks = FIRDatabaseReference()
     var books = NSMutableArray()
+    var isUserLogged = false
+    var userId = ""
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -29,8 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }, withCancelBlock: { error in
                 print(error.description)
         })
-        
-        
+
         return true
     }
     
@@ -38,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         firebaseBooks.forEach { (book) in
             let bookName = book.objectForKey("name")
             let author = book.objectForKey("author")
+            let description = book.objectForKey("description")
             let databaseImageUrl = book.objectForKey("img") as! String
             let imageUrl = NSURL(string: databaseImageUrl)
             let data = NSData(contentsOfURL: imageUrl!)
@@ -45,6 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             bookObj.author = author as! String
             bookObj.name = bookName as! String
             bookObj.imgData = data! as NSData
+            bookObj.bookDescription = description as! String
 
             books.addObject(bookObj)
             print(bookObj.name)

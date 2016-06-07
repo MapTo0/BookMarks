@@ -11,5 +11,6 @@ import UIKit
 class Book: NSObject {
     var name: String = ""
     var author: String = ""
+    var bookDescription: String = ""
     var imgData: NSData = NSData()
 }
