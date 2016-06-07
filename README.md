@@ -1,23 +1,26 @@
 # BookMarks
-BookMarks is an iOS application for people who love reading.
+BookMarks is an **iOS** application for people who love reading.
 
-The application is build using Cocoapods.
-Dependencies:
-	- Firebase
-	- Cosmos
 
-Supporting real oAuth integration with Firebase (v3)
+##Dependencies:
+Dependency management is done using Cocoapods
+- Firebase
+- Cosmos
 
-Databases:
+Supporting real Authentication powered by **Firebase (v3)**
 
-Users
-	- email
-	- password
-	- readBooks
-	- toReadBoooks
+## Databases:
 
-Books
-	- name
-	- author
-	- description
-	- image (string - https URL)
+**Users**
+- email
+- password
+- readBooks
+- toReadBoooks
+
+**Books**
+- name
+- author
+- description
+- image (string - https URL)
+
+**The project is still work in progress!**
