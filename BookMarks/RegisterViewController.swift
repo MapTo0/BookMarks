@@ -43,13 +43,12 @@ class RegisterViewController: UIViewController {
                 alertController.title = "Sign up failed"
                 alertController.addAction(OKAction)
                 self.presentViewController(alertController, animated: true) {}
-
                 print("Sign up failed:", error.localizedDescription)
             } else {
                 self.navigationController?.view = homeView()
                 let firebaseUsers = FIRDatabase.database().reference().child("users")
                 let userId = user!.uid
-
+                self.tabBarItem.title = "Home"
                 firebaseUsers.child(userId).child("firstName").setValue(firstName)
                 firebaseUsers.child(userId).child("lastName").setValue(lastName)
                 

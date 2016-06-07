@@ -19,12 +19,9 @@ class homeView: UIView {
     }
     
     override func layoutSubviews() {
-        let welcomeLable = UILabel()
-        self.backgroundColor = UIColor.whiteColor()
-        welcomeLable.text = "Welcome to Bookmarks !"
-        welcomeLable.textAlignment = NSTextAlignment.Center;
-        print(self.bounds.width)
-        welcomeLable.frame = CGRect(x: 0, y: 55, width: self.bounds.width, height: 44)
-        self.addSubview(welcomeLable)
+        let imageView = UIImageView()
+        imageView.animationImages = [] // todo add images
+        
     }
 }
+ 

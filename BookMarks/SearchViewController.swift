@@ -27,11 +27,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         filteredBooks = appDelegate.books as Array<AnyObject>
     }
 
-    func textFieldShouldReturn(textField: UITextField!) ->Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredBooks.count
     }
@@ -48,6 +43,10 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell?.imageView?.image = UIImage(data: currentBook.imgData)
         
         return cell!
+    }
+    
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        searchField.resignFirstResponder()
     }
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
