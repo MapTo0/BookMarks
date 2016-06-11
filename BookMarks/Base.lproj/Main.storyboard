@@ -217,7 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="507"/>
+            <point key="canvasLocation" x="806" y="0.0"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -232,11 +232,32 @@
                     <connections>
                         <segue destination="cU3-T5-bVN" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="IdI-wZ-jAi" kind="relationship" relationship="viewControllers" id="Ra7-Dd-kna"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--My Books-->
+        <scene sceneID="mp5-nd-s8W">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VS1-yf-rdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="IdI-wZ-jAi" customClass="MyBookViewController" customModule="BookMarks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xtJ-pg-GIt"/>
+                        <viewControllerLayoutGuide type="bottom" id="kve-ni-Wx2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h4R-uh-3dk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Books" image="second" id="Y7p-eC-A6j"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="806" y="766"/>
         </scene>
         <!--Sign in-->
         <scene sceneID="TrI-yU-zmx">
@@ -255,7 +276,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ovT-A3-SjA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="806" y="-708"/>
         </scene>
     </scenes>
     <resources>
