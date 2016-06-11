@@ -11,6 +11,8 @@ import Firebase
 import Cosmos
 
 class SearchDetailsViewController: UIViewController {
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    let TitleLable = UILabel()
 
     var book = Book()
     override func viewDidLoad() {
@@ -22,7 +24,6 @@ class SearchDetailsViewController: UIViewController {
         self.view.backgroundColor = UIColor.whiteColor()
         let logoHeight = (self.view.bounds.size.height - 128)/2
         let bookLogo = UIImageView()
-        let title = UILabel()
         let author = UILabel()
         let hrLine = UIView()
         let readBtn = UIButton()
@@ -36,12 +37,12 @@ class SearchDetailsViewController: UIViewController {
         bookLogo.image = UIImage(data: book.imgData)
         bookLogo.contentMode = UIViewContentMode.ScaleAspectFit
         bookLogo.frame = CGRect(x: 0, y: 20, width: self.view.bounds.size.width, height: logoHeight)
-        title.frame = CGRect(x: 0, y: logoHeight + 30, width: self.view.bounds.size.width, height: 44)
+        TitleLable.frame = CGRect(x: 0, y: logoHeight + 30, width: self.view.bounds.size.width, height: 44)
         author.frame = CGRect(x: 0, y: logoHeight + 64, width: self.view.bounds.size.width, height: 28)
         
-        title.text = book.name
-        title.font = UIFont(name: title.font.fontName, size: 20)
-        title.textAlignment = NSTextAlignment.Center
+        TitleLable.text = book.name
+        TitleLable.font = UIFont(name: TitleLable.font.fontName, size: 20)
+        TitleLable.textAlignment = NSTextAlignment.Center
 
         author.text = "by " + book.author
         author.font = UIFont(name: author.font.fontName, size: 12)
@@ -54,6 +55,7 @@ class SearchDetailsViewController: UIViewController {
         readBtn.frame = CGRect(x: (self.view.bounds.size.width - 180)/2 , y: logoHeight + 120, width: 180, height: 38)
         readBtn.backgroundColor = UIColor.blackColor()
         readBtn.setTitle("Want to Read", forState: UIControlState.Normal)
+        readBtn.addTarget(self, action: #selector(SearchDetailsViewController.addToRead), forControlEvents: UIControlEvents.TouchUpInside)
         
         rateLbl.frame = CGRect(x: 0 , y: logoHeight + 160, width: self.view.bounds.size.width, height: 38)
         rateLbl.text = "Rate this book:"
@@ -80,7 +82,7 @@ class SearchDetailsViewController: UIViewController {
 
         print(description.contentSize.height)
         scrollView.addSubview(bookLogo)
-        scrollView.addSubview(title)
+        scrollView.addSubview(TitleLable)
         scrollView.addSubview(author)
         scrollView.addSubview(hrLine)
         scrollView.addSubview(readBtn)
@@ -89,5 +91,17 @@ class SearchDetailsViewController: UIViewController {
         scrollView.addSubview(fullHrLine)
         scrollView.addSubview(descTitle)
         scrollView.addSubview(description)
+    }
+    
+    func addToRead () {
+        let myApp = FIRAuth(app: FIRApp.defaultApp()!)
+        let user = myApp?.currentUser   
+        if (user == nil) {
+            print("no user")
+        } else {
+            appDelegate.firebaseUsers.child((user?.uid)!).child("books").updateChildValues([TitleLable.text!: TitleLable.text!])
+            print("logged")
+        }
+        
     }
 }

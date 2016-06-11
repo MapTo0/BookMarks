@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     var firebaseBooks = FIRDatabaseReference()
+    var firebaseUsers = FIRDatabaseReference()
     var books = NSMutableArray()
     var isUserLogged = false
     var userId = ""
@@ -24,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FIRApp.configure()
         firebaseBooks = FIRDatabase.database().reference().child("books")
+        firebaseUsers = FIRDatabase.database().reference().child("users")
         
         firebaseBooks.observeEventType(.Value, withBlock: { snapshot in
             let tempFirebaseBooks = snapshot.value as! NSArray
