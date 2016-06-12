@@ -243,7 +243,6 @@
         <!--My Books-->
         <scene sceneID="mp5-nd-s8W">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VS1-yf-rdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="IdI-wZ-jAi" customClass="MyBookViewController" customModule="BookMarks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xtJ-pg-GIt"/>
@@ -257,13 +256,14 @@
                     <tabBarItem key="tabBarItem" title="My Books" image="second" id="Y7p-eC-A6j"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VS1-yf-rdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="854" y="832"/>
         </scene>
         <!--Profile-->
         <scene sceneID="Wz7-eM-zBh">
             <objects>
-                <viewController id="xJL-uT-Zwe" sceneMemberID="viewController">
+                <viewController id="xJL-uT-Zwe" customClass="ProfileViewController" customModule="BookMarks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FXy-k9-Mcr"/>
                         <viewControllerLayoutGuide type="bottom" id="O1F-rO-959"/>

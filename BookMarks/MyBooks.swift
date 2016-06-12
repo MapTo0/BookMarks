@@ -1,15 +1,15 @@
 //
-//  homeView.swift
+//  MyBooks.swift
 //  BookMarks
 //
-//  Created by Hristov, Martin R. on 6/5/16.
+//  Created by Hristov, Martin R. on 6/12/16.
 //  Copyright © 2016 Hristov, Martin R. All rights reserved.
 //
 
 import UIKit
 
-class homeView: UIView {
-    
+class MyBooks: UIView {
+
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -20,10 +20,11 @@ class homeView: UIView {
     
     override func layoutSubviews() {
         let lable = UILabel()
-        lable.text = "Hello Pesho"
-        lable.frame = CGRect(x: 20, y: 20, width: 300, height: 50)
-        self.addSubview(lable)
+        lable.text = "test"
+        
+        lable.frame = CGRect(x: 20, y: 20, width: 20, height: 20)
         self.backgroundColor = UIColor.whiteColor()
+        self.addSubview(lable)
     }
+
 }
- 
