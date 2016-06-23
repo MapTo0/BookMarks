@@ -7,24 +7,41 @@
 //
 
 import UIKit
+import Firebase
 
-class MyBooks: UIView {
+class MyBooks: UIView, UITableViewDelegate, UITableViewDataSource {
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    let tableView = UITableView()
+    var filteredBooks = Array<AnyObject>()
+    var userBooks = NSDictionary()
     
     override func layoutSubviews() {
-        let lable = UILabel()
-        lable.text = "test"
-        
-        lable.frame = CGRect(x: 20, y: 20, width: 20, height: 20)
         self.backgroundColor = UIColor.whiteColor()
-        self.addSubview(lable)
+        self.tableView.frame = CGRect(x: 60, y: 0, width: self.bounds.size.width, height: self.bounds.size.height)
+        self.addSubview(tableView)
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(appDelegate.userBooks.count)
+        
+        return appDelegate.userBooks.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("Cell")
+        if cell == nil {
+            cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
+        }
+        
+        var componentArray = Array(appDelegate.userBooks.allKeys)
+        
+        let currentBook = componentArray[indexPath.row]
+        cell?.textLabel?.text = currentBook as! String
+        
+        return cell!
     }
 
 }

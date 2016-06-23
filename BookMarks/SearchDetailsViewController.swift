@@ -99,8 +99,12 @@ class SearchDetailsViewController: UIViewController {
         if (user == nil) {
             print("no user")
         } else {
-            appDelegate.firebaseUsers.child((user?.uid)!).child("books").updateChildValues([TitleLable.text!: TitleLable.text!])
-            print("logged")
+            let date = NSDate()
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateStyle = .MediumStyle
+            let dateString = dateFormatter.stringFromDate(date)
+            appDelegate.firebaseUsers.child((user?.uid)!).child("books").updateChildValues([dateString: TitleLable.text!])
+            appDelegate.userBooks.setValue(dateString, forKey: TitleLable.text!)
         }
         
     }
