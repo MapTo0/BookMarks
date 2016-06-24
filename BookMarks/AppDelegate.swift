@@ -38,14 +38,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let myApp = FIRAuth(app: FIRApp.defaultApp()!)
         let user = myApp?.currentUser
-        userFirebaseBooks = FIRDatabase.database().reference().child("users").child((user?.uid)!).child("books")
-        userFirebaseBooks.observeEventType(.Value, withBlock: { snapshot in
-            self.userBooks = snapshot.value as! NSDictionary
-            print("we are finally here");
-            }, withCancelBlock: { error in
-                print(error.description)
-        })
-
+        if (user != nil) {
+            userFirebaseBooks = FIRDatabase.database().reference().child("users").child((user?.uid)!).child("books")
+            userFirebaseBooks.observeEventType(.Value, withBlock: { snapshot in
+                self.userBooks = snapshot.value as! NSDictionary
+                print("we are finally here");
+                }, withCancelBlock: { error in
+                    print(error.description)
+            })
+        }
         return true
     }
     

@@ -13,12 +13,11 @@ class MyBooks: UIView, UITableViewDelegate, UITableViewDataSource {
 
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     let tableView = UITableView()
-    var filteredBooks = Array<AnyObject>()
     var userBooks = NSDictionary()
     
     override func layoutSubviews() {
         self.backgroundColor = UIColor.whiteColor()
-        self.tableView.frame = CGRect(x: 60, y: 0, width: self.bounds.size.width, height: self.bounds.size.height)
+        self.tableView.frame = CGRect(x: 0, y: 24, width: self.bounds.size.width, height: self.bounds.size.height)
         self.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
@@ -36,11 +35,12 @@ class MyBooks: UIView, UITableViewDelegate, UITableViewDataSource {
             cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
         }
         
-        var componentArray = Array(appDelegate.userBooks.allKeys)
+        var bookDate = Array(appDelegate.userBooks.allKeys)
+        var bookNames = Array(appDelegate.userBooks.allValues)
         
-        let currentBook = componentArray[indexPath.row]
-        cell?.textLabel?.text = currentBook as! String
-        
+        let currentBook = bookNames[indexPath.row]
+        cell?.textLabel?.text = currentBook as? String
+        cell?.detailTextLabel?.text = "Added on " + (bookDate[indexPath.row] as! String)
         return cell!
     }
 

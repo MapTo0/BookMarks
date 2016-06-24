@@ -19,6 +19,8 @@ class MyBookViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+//        self.navigationController?.navigationBar.topItem?.title = "My Book"
+//        self.navigationController?.setNavigationBarHidden(false, animated: false)
         let myApp = FIRAuth(app: FIRApp.defaultApp()!)
         let user = myApp?.currentUser
         

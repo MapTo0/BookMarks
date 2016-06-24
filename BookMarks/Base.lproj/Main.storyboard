@@ -79,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="1952" y="-708"/>
         </scene>
-        <!--Register View Controller-->
+        <!--Register-->
         <scene sceneID="UBc-xh-fVf">
             <objects>
-                <viewController id="QkE-Cs-oWR" customClass="RegisterViewController" customModule="BookMarks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Register" id="QkE-Cs-oWR" customClass="RegisterViewController" customModule="BookMarks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pkf-GW-oXf"/>
                         <viewControllerLayoutGuide type="bottom" id="fev-kk-ctB"/>
@@ -133,10 +133,10 @@
             </objects>
             <point key="canvasLocation" x="2882" y="-1173"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Login-->
         <scene sceneID="wUs-nM-xoI">
             <objects>
-                <viewController id="c07-7w-aSM" customClass="LoginViewController" customModule="BookMarks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login" id="c07-7w-aSM" customClass="LoginViewController" customModule="BookMarks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OIE-kO-xAY"/>
                         <viewControllerLayoutGuide type="bottom" id="PF8-3r-VV2"/>
@@ -213,7 +213,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="search" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -253,14 +253,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Books" image="second" id="Y7p-eC-A6j"/>
+                    <tabBarItem key="tabBarItem" title="My Books" image="book" id="Y7p-eC-A6j"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VS1-yf-rdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="854" y="832"/>
         </scene>
-        <!--Profile-->
+        <!--Logut-->
         <scene sceneID="Wz7-eM-zBh">
             <objects>
                 <viewController id="xJL-uT-Zwe" customClass="ProfileViewController" customModule="BookMarks" customModuleProvider="target" sceneMemberID="viewController">
@@ -273,18 +273,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="second" id="Yy7-Kf-eHn"/>
+                    <tabBarItem key="tabBarItem" title="Logut" image="login" id="Yy7-Kf-eHn"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYy-uu-0dm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="832"/>
         </scene>
-        <!--Sign in-->
+        <!--Navigation Controller-->
         <scene sceneID="TrI-yU-zmx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cU3-T5-bVN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sign in" image="login" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JAk-jW-XIt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -301,7 +301,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="book" width="25" height="25"/>
         <image name="login" width="25" height="25"/>
-        <image name="second" width="30" height="30"/>
+        <image name="search" width="25" height="25"/>
     </resources>
 </document>

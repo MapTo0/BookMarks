@@ -19,9 +19,19 @@ class FirstViewController: UIViewController {
         let myApp = FIRAuth(app: FIRApp.defaultApp()!)
         let user = myApp?.currentUser
         
+        
         if (user == nil) {
             self.view = self.view
+            self.navigationController!.setNavigationBarHidden(false, animated: false)
+            self.navigationController!.navigationBar.topItem?.title = "BookMarks"
+            self.navigationController?.tabBarItem.title = "Login"
+            self.navigationController?.tabBarItem.image = UIImage(named: "login")
         } else {
+            self.navigationController!.setNavigationBarHidden(false, animated: false)
+            self.navigationController!.navigationBar.topItem?.title = "Home"
+            self.navigationController?.tabBarItem.title = "Home"
+             self.navigationController?.tabBarItem.image = UIImage(named: "home")
+            self.tabBarController?.addChildViewController(ProfileViewController)
             self.view = homeView()
         }
     }
