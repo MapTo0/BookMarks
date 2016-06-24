@@ -32,6 +32,7 @@ class LoginViewController: UIViewController {
         let password = passField.text
         let email = emailField.text
         let myApp = FIRAuth(app: FIRApp.defaultApp()!)
+        let homeImage = UIImage(named: "home")
         myApp!.signInWithEmail(email!, password: password!, completion: { (user, error) in
             if let error = error {
                 let alertController = UIAlertController()
@@ -44,21 +45,12 @@ class LoginViewController: UIViewController {
                 self.presentViewController(alertController, animated: true) {}
                 print("Sign in failed:", error.localizedDescription)
             } else {
+                self.navigationController?.tabBarItem.image = homeImage
+                self.navigationController!.navigationBar.topItem?.title = "Home"
+                self.navigationController?.tabBarItem.title = "Home"
                 self.navigationController?.view = homeView()
                 print ("Signed in with uid:", user!.uid)
             }
         })
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

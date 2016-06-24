@@ -19,11 +19,14 @@ class homeView: UIView {
     }
     
     override func layoutSubviews() {
-        let lable = UILabel()
-        lable.text = "Hello Pesho"
-        lable.frame = CGRect(x: 20, y: 20, width: 300, height: 50)
-        self.addSubview(lable)
         self.backgroundColor = UIColor.whiteColor()
+        var lable = UILabel()
+        lable.text = "wtf"
+        lable.frame = CGRect(x: 60, y: 100, width: 50, height: 10)
+        
+        self.addSubview(lable)
+        
+        print ("home view")
     }
 }
  

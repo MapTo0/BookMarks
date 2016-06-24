@@ -30,8 +30,7 @@ class FirstViewController: UIViewController {
             self.navigationController!.setNavigationBarHidden(false, animated: false)
             self.navigationController!.navigationBar.topItem?.title = "Home"
             self.navigationController?.tabBarItem.title = "Home"
-             self.navigationController?.tabBarItem.image = UIImage(named: "home")
-            self.tabBarController?.addChildViewController(ProfileViewController)
+            self.navigationController?.tabBarItem.image = UIImage(named: "home")
             self.view = homeView()
         }
     }
