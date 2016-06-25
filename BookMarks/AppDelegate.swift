@@ -37,6 +37,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.description)
         })
         
+        self.fillCurrentUserBooks()
+        return true
+    }
+    
+    func fillCurrentUserBooks () {
         let myApp = FIRAuth(app: FIRApp.defaultApp()!)
         let user = myApp?.currentUser
         if (user != nil) {
@@ -48,7 +53,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     print(error.description)
             })
         }
-        return true
     }
     
     func castBooks(firebaseBooks: NSArray) {

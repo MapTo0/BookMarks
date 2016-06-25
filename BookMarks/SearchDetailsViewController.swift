@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import Cosmos
+import Toast_Swift
 
 class SearchDetailsViewController: UIViewController {
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -105,6 +106,7 @@ class SearchDetailsViewController: UIViewController {
             let dateString = dateFormatter.stringFromDate(date)
             appDelegate.firebaseUsers.child((user?.uid)!).child("books").updateChildValues([dateString: TitleLable.text!])
             appDelegate.userBooks.setValue(dateString, forKey: TitleLable.text!)
+            self.view.makeToast("Book is added to your read list", duration: 2.0, position: .Center)
         }
         
     }

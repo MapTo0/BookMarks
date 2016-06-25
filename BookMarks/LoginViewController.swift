@@ -14,6 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passField: UITextField!
     @IBOutlet weak var loginBtn: UIButton!
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,6 +49,7 @@ class LoginViewController: UIViewController {
                 self.navigationController?.tabBarItem.image = homeImage
                 self.navigationController!.navigationBar.topItem?.title = "Home"
                 self.navigationController?.tabBarItem.title = "Home"
+                self.appDelegate.fillCurrentUserBooks()
                 self.navigationController?.view = homeView()
                 print ("Signed in with uid:", user!.uid)
             }

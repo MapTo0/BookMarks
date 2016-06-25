@@ -86,8 +86,10 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-BookMarks/Cosmos.framework"
   install_framework "Pods-BookMarks/ImageSlideshow.framework"
+  install_framework "Pods-BookMarks/Toast_Swift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-BookMarks/Cosmos.framework"
   install_framework "Pods-BookMarks/ImageSlideshow.framework"
+  install_framework "Pods-BookMarks/Toast_Swift.framework"
 fi

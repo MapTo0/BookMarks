@@ -57,6 +57,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         navigationController!.navigationItem.setHidesBackButton(false, animated: false)
         navigationController!.setNavigationBarHidden(false, animated: false)
         navigationController!.navigationBar.topItem?.title = "Search"
+        navigationController?.navigationBar.tintColor = UIColor.brownColor()
         searchDetailsVC.book = selectedBook as! Book
     }
 

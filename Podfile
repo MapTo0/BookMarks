@@ -10,6 +10,7 @@ target 'BookMarks' do
     pod 'Firebase/Auth'
     pod 'Cosmos', '~> 1.2'
     pod 'ImageSlideshow', '~> 0.5'
+    pod 'Toast-Swift', '~> 1.3.0'
 end
 
 target 'BookMarksTests' do

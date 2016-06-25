@@ -23,14 +23,13 @@ class homeView: UIView {
     }
     
     override func layoutSubviews() {
-        var viewColoer = UIColor(red: 246, green: 247, blue: 240, alpha: 1)
-        self.backgroundColor = viewColoer
+        self.backgroundColor = UIColor.whiteColor()
         let screenSize: CGRect = UIScreen.mainScreen().bounds
         let slider = ImageSlideshow()
         slider.setImageInputs([ImageSource(image: UIImage(named: "slide1")!), ImageSource(image: UIImage(named: "slide2")!), ImageSource(image: UIImage(named: "slide3")!), ImageSource(image: UIImage(named: "slide4")!), ImageSource(image: UIImage(named: "slide5")!)])
         slider.slideshowInterval = 3
         slider.contentScaleMode = UIViewContentMode.ScaleAspectFill
-        slider.frame = CGRectMake(0, 64, screenSize.width, self.bounds.height * 0.5)
+        slider.frame = CGRectMake(0, 0, screenSize.width, self.bounds.height * 0.6)
         
         let helloLable = UILabel()
         helloLable.frame = CGRectMake(50, self.bounds.height * 0.6 + 20, screenSize.width, 80)
