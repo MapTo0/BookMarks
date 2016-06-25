@@ -9,6 +9,7 @@ target 'BookMarks' do
     pod 'Firebase/Database'
     pod 'Firebase/Auth'
     pod 'Cosmos', '~> 1.2'
+    pod 'ImageSlideshow', '~> 0.5'
 end
 
 target 'BookMarksTests' do
