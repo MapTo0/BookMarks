@@ -7,12 +7,24 @@
 //
 
 import UIKit
+import Firebase
 
 class InitialViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        let item = (self.tabBarController?.tabBar.items?.last)! as UITabBarItem
+        let myApp = FIRAuth(app: FIRApp.defaultApp()!)
+        let user = myApp?.currentUser
+        
+        if (user == nil) {
+            item.enabled = false
+        } else {
+            item.enabled = true
+        }
     }
 }

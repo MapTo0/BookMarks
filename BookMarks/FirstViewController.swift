@@ -27,7 +27,7 @@ class FirstViewController: UIViewController {
         if (user == nil) {
             self.navigationController!.navigationBar.topItem?.title = "BookMarks"
             self.navigationController?.tabBarItem.title = "Login"
-            self.navigationController?.tabBarItem.image = loginImage
+            self.navigationController?.tabBarItem.image = homeImage
         } else {
             var testLable = UILabel()
             testLable.text = " wtf"
