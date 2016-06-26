@@ -16,6 +16,14 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return filteredBooks.count
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         self.view.backgroundColor = UIColor.whiteColor()
         searchField.frame = CGRect(x: 0, y: 64, width: self.view.bounds.size.width, height: 44)
         self.view.addSubview(searchField)
@@ -25,10 +33,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         searchField.delegate = self
         tableView.delegate = self
         filteredBooks = appDelegate.books as Array<AnyObject>
-    }
-
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredBooks.count
+        
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

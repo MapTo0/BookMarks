@@ -46,11 +46,14 @@ class LoginViewController: UIViewController {
                 self.presentViewController(alertController, animated: true) {}
                 print("Sign in failed:", error.localizedDescription)
             } else {
+                self.navigationController?.navigationBar.hidden = true
                 self.navigationController?.tabBarItem.image = homeImage
                 self.navigationController!.navigationBar.topItem?.title = "Home"
                 self.navigationController?.tabBarItem.title = "Home"
                 self.appDelegate.fillCurrentUserBooks()
-                self.navigationController?.view = homeView()
+                var home = HomeViewController()
+                home.view = homeView()
+                self.navigationController?.pushViewController(home, animated: false)
                 print ("Signed in with uid:", user!.uid)
             }
         })

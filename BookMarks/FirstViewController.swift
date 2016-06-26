@@ -17,24 +17,30 @@ class FirstViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
         let myApp = FIRAuth(app: FIRApp.defaultApp()!)
         let user = myApp?.currentUser
-        let firebaseUsers = FIRDatabase.database().reference().child("users")
         
+        let homeImage = UIImage(named: "home")
+        let loginImage = UIImage(named: "login")
         
         if (user == nil) {
-            self.view = self.view
             self.navigationController!.navigationBar.topItem?.title = "BookMarks"
             self.navigationController?.tabBarItem.title = "Login"
-            self.navigationController?.tabBarItem.image = UIImage(named: "login")
+            self.navigationController?.tabBarItem.image = loginImage
         } else {
-            self.navigationController!.setNavigationBarHidden(true, animated: false)
+            var testLable = UILabel()
+            testLable.text = " wtf"
+            testLable.frame = CGRect(x: 400, y: 400, width: 400, height: 400)
+            self.view.addSubview(testLable)
             self.navigationController!.navigationBar.topItem?.title = "Home"
             self.navigationController?.tabBarItem.title = "Home"
-            self.navigationController?.tabBarItem.image = UIImage(named: "home")
+            self.navigationController?.tabBarItem.image = homeImage
             self.navigationController?.navigationBar.backgroundColor = UIColor.brownColor()
             self.navigationController?.tabBarController?.tabBar.tintColor = UIColor.brownColor()
-            self.view = homeView()
+            var home = HomeViewController()
+            home.view = homeView()
+            self.navigationController?.pushViewController(home, animated: false)
         }
     }
 }

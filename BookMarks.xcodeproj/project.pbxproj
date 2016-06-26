@@ -14,6 +14,7 @@
 		876861A51D05E8E800339CB2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 876861A41D05E8E800339CB2 /* GoogleService-Info.plist */; };
 		876861A91D06075700339CB2 /* SearchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876861A81D06075700339CB2 /* SearchDetailsViewController.swift */; };
 		876861AB1D06084100339CB2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876861AA1D06084100339CB2 /* SearchViewController.swift */; };
+		876A41221D205D74007351B5 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876A41211D205D74007351B5 /* InitialViewController.swift */; };
 		879F6A1E1CFA139900534083 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879F6A1D1CFA139900534083 /* AppDelegate.swift */; };
 		879F6A201CFA139900534083 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879F6A1F1CFA139900534083 /* FirstViewController.swift */; };
 		879F6A221CFA139900534083 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879F6A211CFA139900534083 /* SecondViewController.swift */; };
@@ -61,6 +62,7 @@
 		876861A41D05E8E800339CB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		876861A81D06075700339CB2 /* SearchDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDetailsViewController.swift; sourceTree = "<group>"; };
 		876861AA1D06084100339CB2 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		876A41211D205D74007351B5 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		879F6A1A1CFA139900534083 /* BookMarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookMarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879F6A1D1CFA139900534083 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		879F6A1F1CFA139900534083 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -146,8 +148,8 @@
 				874E3DB81CFB8790001BBBA4 /* RegisterViewController.swift */,
 				87A7B5801D02E95A004484E9 /* LoginViewController.swift */,
 				87B692151D02F99C0033C290 /* SearchNavigationViewController.swift */,
-				876861AA1D06084100339CB2 /* SearchViewController.swift */,
 				876861A81D06075700339CB2 /* SearchDetailsViewController.swift */,
+				876861AA1D06084100339CB2 /* SearchViewController.swift */,
 				873350331D0D94E700D7D625 /* ProfileViewController.swift */,
 				87B4476A1D0C2F6A00316BCB /* MyBookViewController.swift */,
 				873350351D0D981400D7D625 /* MyBooks.swift */,
@@ -156,6 +158,7 @@
 				87B469CE1D072C65007C1D83 /* HairlineView.swift */,
 				87B53B751D047003005EC29F /* homeView.swift */,
 				87B53B731D046580005EC29F /* HomeViewController.swift */,
+				876A41211D205D74007351B5 /* InitialViewController.swift */,
 				879F6A231CFA139900534083 /* Main.storyboard */,
 				876861A41D05E8E800339CB2 /* GoogleService-Info.plist */,
 				879F6A261CFA139900534083 /* Assets.xcassets */,
@@ -393,6 +396,7 @@
 				873350341D0D94E700D7D625 /* ProfileViewController.swift in Sources */,
 				87B53B741D046580005EC29F /* HomeViewController.swift in Sources */,
 				879F6A1E1CFA139900534083 /* AppDelegate.swift in Sources */,
+				876A41221D205D74007351B5 /* InitialViewController.swift in Sources */,
 				879F6A201CFA139900534083 /* FirstViewController.swift in Sources */,
 				873350381D0D9AF600D7D625 /* MyBooksNotLogged.swift in Sources */,
 				87B4476B1D0C2F6A00316BCB /* MyBookViewController.swift in Sources */,

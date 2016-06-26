@@ -17,7 +17,7 @@ class MyBooks: UIView, UITableViewDelegate, UITableViewDataSource {
     
     override func layoutSubviews() {
         self.backgroundColor = UIColor.whiteColor()
-        self.tableView.frame = CGRect(x: 0, y: 24, width: self.bounds.size.width, height: self.bounds.size.height)
+        self.tableView.frame = CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height)
         self.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
@@ -41,6 +41,7 @@ class MyBooks: UIView, UITableViewDelegate, UITableViewDataSource {
         let currentBook = bookNames[indexPath.row]
         cell?.textLabel?.text = currentBook as? String
         cell?.detailTextLabel?.text = "Added on " + (bookDate[indexPath.row] as! String)
+        cell?.imageView?.image = UIImage(named: "book")
         return cell!
     }
 

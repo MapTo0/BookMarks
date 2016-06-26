@@ -280,10 +280,10 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="832"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Initial View Controller-->
         <scene sceneID="TrI-yU-zmx">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cU3-T5-bVN" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cU3-T5-bVN" customClass="InitialViewController" customModule="BookMarks" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JAk-jW-XIt">

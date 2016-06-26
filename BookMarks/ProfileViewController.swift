@@ -13,21 +13,33 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let myApp = FIRAuth(app: FIRApp.defaultApp()!)
-        
-        try! myApp!.signOut()
-
-        // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(animated: Bool) {
-        let app = FIRAuth(app: FIRApp.defaultApp()!)
-        var currentUser = app?.currentUser
+    
+    override func viewDidAppear(animated: Bool) {
         
+        // Do any additional setup after loading the view.
+        let app = FIRAuth(app: FIRApp.defaultApp()!)
+        let currentUser = app?.currentUser
+        try! app!.signOut()
+        
+        let testLable = UILabel()
+        testLable.text = "wtf"
+        testLable.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
+        self.view.addSubview(testLable)
         if (currentUser == nil) {
-            self.navigationController?.navigationBarHidden = true
+            let firstViewController = self.tabBarController?.viewControllers![0]
+            self.tabBarController?.selectedIndex = 0
+            self.tabBarController?.selectedViewController = firstViewController
         } else {
-            self.navigationController?.navigationBarHidden = true
+            let firstViewController = self.tabBarController?.viewControllers![0] as! UINavigationController
+            firstViewController.navigationBar.hidden = false
+            firstViewController.viewControllers.popLast()
+            firstViewController.popViewControllerAnimated(false)
+            self.tabBarController?.selectedIndex = 0
+            self.tabBarController?.selectedViewController = firstViewController
         }
     }
 }
+    
+
