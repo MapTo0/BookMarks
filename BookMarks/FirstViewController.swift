@@ -20,6 +20,11 @@ class FirstViewController: UIViewController {
         super.viewDidAppear(true)
         let myApp = FIRAuth(app: FIRApp.defaultApp()!)
         let user = myApp?.currentUser
+        self.navigationController?.tabBarController?.tabBar.tintColor = UIColor.brownColor()
+        
+        let backgroundImage = UIImageView(frame: UIScreen.mainScreen().bounds)
+        backgroundImage.image = UIImage(named: "tempHome")
+        self.view.insertSubview(backgroundImage, atIndex: 0)
         
         let homeImage = UIImage(named: "home")
         let loginImage = UIImage(named: "login")
@@ -37,7 +42,6 @@ class FirstViewController: UIViewController {
             self.navigationController?.tabBarItem.title = "Home"
             self.navigationController?.tabBarItem.image = homeImage
             self.navigationController?.navigationBar.backgroundColor = UIColor.brownColor()
-            self.navigationController?.tabBarController?.tabBar.tintColor = UIColor.brownColor()
             var home = HomeViewController()
             home.view = homeView()
             self.navigationController?.pushViewController(home, animated: false)

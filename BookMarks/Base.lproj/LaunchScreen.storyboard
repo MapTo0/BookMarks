@@ -17,25 +17,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="og0-R4-t9V">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="homeScreen" translatesAutoresizingMaskIntoConstraints="NO" id="og0-R4-t9V">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.97105417420845519" green="0.99943842679081818" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="bookMarks" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="NHa-Aw-Hil">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="BookMarks" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="NHa-Aw-Hil">
                                 <rect key="frame" x="198" y="223" width="205" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Meet your next favorite book" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHQ-if-fiQ">
                                 <rect key="frame" x="189" y="313" width="223" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="og0-R4-t9V" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="1VI-Xa-SLa"/>
+                            <constraint firstItem="og0-R4-t9V" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="KFA-PE-Pvw"/>
                             <constraint firstItem="cHQ-if-fiQ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Sqi-6R-BhU"/>
                             <constraint firstItem="NHa-Aw-Hil" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="lkZ-hc-XkL"/>
                             <constraint firstItem="NHa-Aw-Hil" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="tQc-xa-q8O"/>
@@ -47,4 +49,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="homeScreen" width="1400" height="787"/>
+    </resources>
 </document>

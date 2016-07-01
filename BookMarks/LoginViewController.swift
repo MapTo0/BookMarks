@@ -20,7 +20,9 @@ class LoginViewController: UIViewController {
         
         loginBtn.addTarget(self, action: #selector(LoginViewController.loginUser), forControlEvents: UIControlEvents.TouchUpInside)
         
-
+        let backgroundImage = UIImageView(frame: UIScreen.mainScreen().bounds)
+        backgroundImage.image = UIImage(named: "tempHome")
+        self.view.insertSubview(backgroundImage, atIndex: 0)
         // Do any additional setup after loading the view.
     }
 

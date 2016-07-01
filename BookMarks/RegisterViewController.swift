@@ -23,6 +23,9 @@ class RegisterViewController: UIViewController {
         registerBtn.addTarget(self, action: #selector(RegisterViewController.registerUser), forControlEvents: UIControlEvents.TouchUpInside)
 
         // Do any additional setup after loading the view.
+        let backgroundImage = UIImageView(frame: UIScreen.mainScreen().bounds)
+        backgroundImage.image = UIImage(named: "tempHome")
+        self.view.insertSubview(backgroundImage, atIndex: 0)
     }
     
     func registerUser () {

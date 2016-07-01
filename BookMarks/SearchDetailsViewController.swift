@@ -98,7 +98,7 @@ class SearchDetailsViewController: UIViewController {
         let myApp = FIRAuth(app: FIRApp.defaultApp()!)
         let user = myApp?.currentUser   
         if (user == nil) {
-            print("no user")
+            self.view.makeToast("You are not logged in. Please login or register", duration: 2.0, position: .Center)
         } else {
             let date = NSDate()
             let dateFormatter = NSDateFormatter()
