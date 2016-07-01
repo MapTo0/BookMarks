@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var firebaseBooks = FIRDatabaseReference()
     var firebaseUsers = FIRDatabaseReference()
     var userFirebaseBooks = FIRDatabaseReference()
-    var userBooks = NSDictionary()
+    var userBooks = NSMutableDictionary()
     var books = NSMutableArray()
     var isUserLogged = false
     var userId = ""
@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if (user != nil) {
             userFirebaseBooks = FIRDatabase.database().reference().child("users").child((user?.uid)!).child("books")
             userFirebaseBooks.observeEventType(.Value, withBlock: { snapshot in
-                self.userBooks = snapshot.value as! NSDictionary
+                self.userBooks = snapshot.value as! NSMutableDictionary
                 print("we are finally here");
                 }, withCancelBlock: { error in
                     print(error.description)

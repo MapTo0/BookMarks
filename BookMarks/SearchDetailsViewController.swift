@@ -104,8 +104,9 @@ class SearchDetailsViewController: UIViewController {
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateStyle = .MediumStyle
             let dateString = dateFormatter.stringFromDate(date)
-            appDelegate.firebaseUsers.child((user?.uid)!).child("books").updateChildValues([dateString: TitleLable.text!])
-            appDelegate.userBooks.setValue(dateString, forKey: TitleLable.text!)
+            appDelegate.firebaseUsers.child((user?.uid)!).child("books").updateChildValues([TitleLable.text!: dateString])
+            appDelegate.userBooks.setValue((dateString as String), forKey: TitleLable.text!)
+
             self.view.makeToast("Book is added to your read list", duration: 2.0, position: .Center)
         }
         

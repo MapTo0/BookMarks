@@ -52,6 +52,7 @@ class RegisterViewController: UIViewController {
                 let firebaseUsers = FIRDatabase.database().reference().child("users")
                 let userId = user!.uid
                 self.tabBarItem.title = "Home"
+                self.navigationController!.navigationBar.topItem?.title = "Home"
                 firebaseUsers.child(userId).child("firstName").setValue(firstName)
                 firebaseUsers.child(userId).child("lastName").setValue(lastName)
                 

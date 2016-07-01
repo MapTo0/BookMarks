@@ -45,6 +45,8 @@ class FirstViewController: UIViewController {
             var home = HomeViewController()
             home.view = homeView()
             self.navigationController?.pushViewController(home, animated: false)
+            self.navigationController?.setToolbarHidden(true, animated: false)
+            
         }
     }
 }

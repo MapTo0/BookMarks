@@ -39,8 +39,8 @@ class MyBooks: UIView, UITableViewDelegate, UITableViewDataSource {
         var bookNames = Array(appDelegate.userBooks.allValues)
         
         let currentBook = bookNames[indexPath.row]
-        cell?.textLabel?.text = currentBook as? String
-        cell?.detailTextLabel?.text = "Added on " + (bookDate[indexPath.row] as! String)
+        cell?.textLabel?.text = bookDate[indexPath.row] as! String
+        cell?.detailTextLabel?.text = "Added on " + (currentBook as! String) as? String
         cell?.imageView?.image = UIImage(named: "book")
         return cell!
     }

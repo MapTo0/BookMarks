@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 
 class ProfileViewController: UIViewController {
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,8 @@ class ProfileViewController: UIViewController {
             firstViewController.popViewControllerAnimated(false)
             self.tabBarController?.selectedIndex = 0
             self.tabBarController?.selectedViewController = firstViewController
+            
+            appDelegate.userBooks.removeAllObjects()
         }
     }
 }
